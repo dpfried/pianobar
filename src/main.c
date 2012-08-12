@@ -401,6 +401,8 @@ int main (int argc, char **argv) {
 		close (app.input.fds[1]);
 	}
 
+    BarUiStartEventCmd (&app.settings, "exit", NULL, NULL, &app.player, NULL, PIANO_RET_OK, WAITRESS_RET_OK);
+
 	PianoDestroy (&app.ph);
 	PianoDestroyPlaylist (app.songHistory);
 	PianoDestroyPlaylist (app.playlist);
